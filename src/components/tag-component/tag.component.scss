@@ -1,0 +1,19 @@
+@import '../../global.scss';
+
+.tag {
+    display: inline-block;
+    padding: 5px 5px;
+    border-radius: 5px;
+    max-width: 160px;
+    margin: 3px 0 0 3px;
+    cursor: pointer;
+}
+.tag-data {
+    margin: 0;
+    text-transform: capitalize;
+    color: $color--white;
+    font-size: 0.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

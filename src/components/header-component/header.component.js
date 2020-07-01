@@ -1,0 +1,51 @@
+import React from 'react';
+import './header.component.scss'
+
+import logo from '../../assets/logo.svg';
+import menu from '../../assets/open-menu.svg';
+
+class HeaderComponent extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            menuOpen: false,
+            menuDisplay: (window.innerWidth > 800) ? 'flex' : 'none'
+        }
+        window.onresize = () => {
+            this.setState({
+                menuDisplay: (window.innerWidth > 800) ? 'flex' : 'none'
+            })
+        }
+    }
+    changeMenuState = () => {
+        this.setState({
+            menuDisplay: (this.state.menuOpen) ? 'none' : 'flex',
+            menuOpen: !this.state.menuOpen
+        })
+    }
+
+    render() {
+        return(
+            <header className="header">
+                <div className="header-content mrgn-auto">
+                    <div className="logo">
+                        <img className="logo-img" src={logo} alt="articalX"/>
+                        <img className="open-menu" src={menu} alt="menu" onClick={this.changeMenuState}/>
+                    </div>
+                    <div className="links" style={{display:this.state.menuDisplay}}>
+                        <ul className="links-ul">
+                            <li className="links--li">home</li>
+                            <li className="links--li">trending</li>
+                            <li className="links--li">fashion</li>
+                            <li className="links--li">technology</li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        )
+    }
+
+}
+
+export default HeaderComponent;
