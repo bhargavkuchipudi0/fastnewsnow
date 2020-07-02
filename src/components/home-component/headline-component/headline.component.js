@@ -73,7 +73,7 @@ class HeadLineComponent extends React.Component {
                                             </div>
                                             <div className="news-cont">
                                                 <p className="title">{obj.title}</p>
-                                                <div className="bot-tags">
+                                                <div className="tag-holder-ex">
                                                     <TagComponent name={'source'} type={'source'} data={obj.source.name} />
                                                     <TagComponent name={'author'} type={'author'} data={obj.author} />
                                                 </div>

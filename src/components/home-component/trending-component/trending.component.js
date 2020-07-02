@@ -1,8 +1,8 @@
 import React from 'react';
 import './trending.component.scss';
 
-import TagComponent from '../../tag-component/tag.component';
 import { sharedService } from '../../../services/shared.service';
+import GigComponent from '../../gig-component/gig.component';
 
 class TrendingComponent extends React.Component {
     constructor(props) {
@@ -55,18 +55,9 @@ class TrendingComponent extends React.Component {
                     {
                         this.state.trendingData.map((obj, i) => {
                             return (
-                                <article className="trend-art" key={i}>
-                                    <div className="image-hold" style={{ backgroundImage: `url(${obj.urlToImage})` }}>
-
-                                    </div>
-                                    <div className="cont-hold">
-                                        <p className="title" onClick={this.navigateToStory.bind(this, obj.url)}>{obj.title}</p>
-                                        <div className="tags">
-                                            <TagComponent name={'source'} type={'source'} data={obj.source.name} />
-                                            <TagComponent name={'author'} type={'author'} data={obj.author} />
-                                        </div>
-                                    </div>
-                                </article>
+                                <div className="gig-holder"  key={i}>
+                                    <GigComponent obj={obj}/>
+                                </div>
                             )
                         })
                     }

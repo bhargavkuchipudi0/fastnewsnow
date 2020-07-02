@@ -2,7 +2,7 @@ import React from 'react';
 import './editor-pick.component.scss';
 
 import { sharedService } from '../../../services/shared.service';
-import TagComponent from '../../tag-component/tag.component';
+import GigComponent from '../../gig-component/gig.component';
 
 class EditorPickComponent extends React.Component {
     constructor(props) {
@@ -60,17 +60,7 @@ class EditorPickComponent extends React.Component {
                             .map((obj, i) => {
                                 return (
                                     <div className="art-grid--element" key={i}>
-                                        <div className="inner-element">
-                                            <div className="img" style={{ backgroundImage: `url(${obj.urlToImage})` }}>
-                                            </div>
-                                            <div className="art-cont">
-                                                <p className="title" onClick={this.navigateToStory.bind(this, obj.url)}>{obj.title}</p>
-                                                <div className="tag-holder">
-                                                    <TagComponent type={'source'} name={'source'} data={obj.source.name} />
-                                                    <TagComponent type={'author'} name={'author'} data={obj.author} />
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <GigComponent obj={obj}/>
                                     </div>
                                 )
                             })

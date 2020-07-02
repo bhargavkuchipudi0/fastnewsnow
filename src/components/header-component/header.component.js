@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './header.component.scss'
 
 import logo from '../../assets/logo.svg';
@@ -35,10 +36,10 @@ class HeaderComponent extends React.Component {
                     </div>
                     <div className="links" style={{display:this.state.menuDisplay}}>
                         <ul className="links-ul">
-                            <li className="links--li">home</li>
-                            <li className="links--li">trending</li>
-                            <li className="links--li">fashion</li>
-                            <li className="links--li">technology</li>
+                            <Link to={"/home"}><li className="links--li">home</li></Link>
+                            <Link to={"/categories"}><li className="links--li">categories</li></Link>
+                            <Link to={"/"}><li className="links--li">fashion</li></Link>
+                            <Link to={"/"}><li className="links--li">technology</li></Link>
                         </ul>
                     </div>
                 </div>
