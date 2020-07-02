@@ -1,10 +1,16 @@
 import React from 'react';
 
 class CategoriesComponent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
 
     render() {
         return (
-            <h1>Categories component works.</h1>
+            <div className="route-container">
+                <p>categories component</p>
+            </div>
         )
     }
 

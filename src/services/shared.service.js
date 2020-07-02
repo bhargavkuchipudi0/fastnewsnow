@@ -2,6 +2,7 @@
 import axios from 'axios';
 
 const host = 'http://newsapi.org/v2/';
+// const host = 'http://news.org/v2/';
 const apiKey = '513be178d0924858977af297d9cc0811';
 
 export const sharedService = {

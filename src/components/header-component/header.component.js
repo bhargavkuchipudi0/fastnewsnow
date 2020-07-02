@@ -31,7 +31,7 @@ class HeaderComponent extends React.Component {
             <header className="header">
                 <div className="header-content mrgn-auto">
                     <div className="logo">
-                        <img className="logo-img" src={logo} alt="articalX"/>
+                        <Link to={'/home'}><img className="logo-img" src={logo} alt="articalX"/></Link>
                         <img className="open-menu" src={menu} alt="menu" onClick={this.changeMenuState}/>
                     </div>
                     <div className="links" style={{display:this.state.menuDisplay}}>

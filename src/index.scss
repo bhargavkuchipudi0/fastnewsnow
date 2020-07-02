@@ -15,15 +15,6 @@ code {
     	monospace;
 }
 
-.mrgn-auto {
-	margin: 0 auto;
-	max-width: 75%;
-}
-.tag-holder {
-	display: flex;
-	flex-direction: row;
-}
-
 @media screen and (max-width: 1220px) {
 	.mrgn-auto {
 		max-width: 85%;
