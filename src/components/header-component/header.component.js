@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.component.scss'
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo-name.svg';
 import menu from '../../assets/open-menu.svg';
 
 class HeaderComponent extends React.Component {
