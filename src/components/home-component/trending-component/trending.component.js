@@ -34,7 +34,6 @@ class TrendingComponent extends React.Component {
 
     getTrendingData = () => {
         sharedService.getHeadLines(this.state.queryRoute, this.state.queryString).then((res) => {
-            this.state.trendingData.concat(res.data.articles);
             let trendingData = [];
             res.data.articles.forEach(article => {
                 trendingData.push(article);
