@@ -12,7 +12,7 @@
     - Editors choice. etc..,
     
     This is a front end application built with React JS using Newsapi.org developer api.
-    I have leveragee the power of React JS by creating several components and reused them.
+    I have leverage the power of React JS by creating several components and reused them.
     I have integrated the filter module to search betweeen different categories (Headlines,
     politics, Technology, Trending, Music, Movies, etc..,) and sources (CNN, BBC NEws, ESPN,
     The Hindu, etc..,). The search feature is yet to be developed.
@@ -23,5 +23,8 @@
 
     Fell free to fork this project and add new features and designes.
 
-    
+    ![Home Page](https://github.com/bhargavkuchipudi0/fastnewsnow/blob/develop/screen%20shots/fnn_home.png?raw=true)
+    ![Categories Page](https://github.com/bhargavkuchipudi0/fastnewsnow/blob/develop/screen%20shots/fnn_categories.png?raw=true)
+
+
 
