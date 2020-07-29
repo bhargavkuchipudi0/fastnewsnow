@@ -18,7 +18,7 @@
     The Hindu, etc..,). The search feature is yet to be developed.
 
     Since I am using a developer api, it limit my access to the api by 500 api calls per day.
-    It does not even allow the requests form localhost. It blocks all the CORS request. So, I
+    It only allow the requests form localhost. It blocks all the CORS request. So, I
     cannot host this project on heroku.
 
     Fell free to fork this project and add new features and designes.
