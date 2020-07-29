@@ -11,10 +11,17 @@
     - Fashion
     - Editors choice. etc..,
     
-    I built this application using Newapi.org. They are providing api's for news articals.
-    I have the developer version which is free. But, it wont allow me to make cross-origin
-    requests. It works only in the local host. 
-    Although, I have hosted the application on heroku (here)[https://fastnewsnow.herokuapp.com].
+    This is a front end application built with React JS using Newsapi.org developer api.
+    I have leveragee the power of React JS by creating several components and reused them.
+    I have integrated the filter module to search betweeen different categories (Headlines,
+    politics, Technology, Trending, Music, Movies, etc..,) and sources (CNN, BBC NEws, ESPN,
+    The Hindu, etc..,). The search feature is yet to be developed.
+
+    Since I am using a developer api, it limit my access to the api by 500 api calls per day.
+    It does not even allow the requests form localhost. It blocks all the CORS request. So, I
+    cannot host this project on heroku.
+
+    Fell free to fork this project and add new features and designes.
+
     
-    I am looking for an alternative to resolve this limitation by creating my own server and
-    collecting the data using Node JS and mongo DB.
+

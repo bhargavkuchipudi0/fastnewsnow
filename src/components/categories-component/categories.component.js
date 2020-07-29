@@ -1,6 +1,7 @@
 import React from 'react';
 import './categories.component.scss';
 import ReactPaginate from 'react-paginate';
+import queryString from 'query-string';
 // import assetes
 import search_icon from '../../assets/search.svg';
 // import components
@@ -21,7 +22,9 @@ class CategoriesComponent extends React.Component {
                 trending: false,
                 music: false,
                 movies: false,
-                special: false
+                special: false,
+                culture: false,
+                lifestyle: false
             },
             filter_sources: {
                 "cnn": {
@@ -81,11 +84,20 @@ class CategoriesComponent extends React.Component {
     }
 
 
-    componentDidMount = () => {
+    componentDidMount = async() => {
 
+        await this.checkQueryString();
         this.updateQueryString();
         this.getSearchCategories();
 
+    }
+
+    checkQueryString = () => {
+        let params = queryString.parse(this.props.location.search);
+
+        if (params.category) {
+            this.updateFilterCategories(params.category);
+        }
     }
 
     updateQueryString = () => {
@@ -97,6 +109,24 @@ class CategoriesComponent extends React.Component {
         this.setState({
             queryString: queryStringCopy
         });
+
+    }
+
+    updateFilterCategories = (value, callback = null) => {
+        let prevobjCat = this.state.filter_categories;
+        Object.keys(prevobjCat).map(key => {
+            return prevobjCat[key] = (key === value) ? true : false;
+        });
+
+        this.setState({
+            filter_categories: prevobjCat,
+            selected_cat: value,
+            queryString: {
+                ...this.state.queryString,
+                page: 1
+            },
+            selectedPage: 0
+        }, callback);
 
     }
 
@@ -116,31 +146,17 @@ class CategoriesComponent extends React.Component {
     }
 
     onFilterChange = (value, cat_type) => {
-
         switch (cat_type) {
 
             case 'filter_categories':
 
-                let prevobjCat = this.state.filter_categories;
-                Object.keys(prevobjCat).map((key, i) => {
-                    return prevobjCat[key] = (key === value) ? true : false;
-                });
-
-                this.setState({
-                    filter_categories: prevobjCat,
-                    selected_cat: value,
-                    queryString: {
-                        ...this.state.queryString,
-                        page: 1
-                    },
-                    selectedPage: 0
-                }, this.handleUpdate);
+                this.updateFilterCategories(value, this.handleUpdate);
 
                 break;
             case 'filter_sources':
 
                 let prevobjSource = this.state.filter_sources
-                Object.keys(prevobjSource).map((key, i) => {
+                Object.keys(prevobjSource).map((key) => {
                     return prevobjSource[key].checked = (prevobjSource[key].name === value) ? true : false
                 });
 
@@ -164,13 +180,11 @@ class CategoriesComponent extends React.Component {
     }
 
     handleUpdate = () => {
-        console.log(this.state.selectedPage);
         this.updateQueryString();
         this.getSearchCategories();
     }
 
     pageChange = (e) => {
-        console.log(e);
         let page = e.selected+1;
         this.setState({
             selectedPage: page-1,
@@ -179,7 +193,6 @@ class CategoriesComponent extends React.Component {
                 page: page
             }
         }, this.handleUpdate);
-
     }
 
 
@@ -211,7 +224,7 @@ class CategoriesComponent extends React.Component {
                                 }
                             </div>
                             <div className="filter-sec">
-                                <h3>sources</h3>
+                                <h3>source</h3>
                                 {
                                     Object.keys(this.state.filter_sources).map((key, i) => {
                                         return (
@@ -250,6 +263,7 @@ class CategoriesComponent extends React.Component {
                                     previousLinkClassName="pageLinkClass"
                                     nextLinkClassName="pageLinkClass"
                                     onPageChange={e => this.pageChange(e)}
+                                    disableInitialCallback={true}
                                 />
                             </div>
                         </div>
