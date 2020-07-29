@@ -3,13 +3,6 @@
 
     A daily news web application where all different types of news around the world can be
     searched and filtered at a single place. This application was built with React JS.
-
-    - Head Lines
-    - Categories
-    - Trending
-    - Technology
-    - Fashion
-    - Editors choice. etc..,
     
     This is a front end application built with React JS using Newsapi.org developer api.
     I have leverage the power of React JS by creating several components and reused them.
