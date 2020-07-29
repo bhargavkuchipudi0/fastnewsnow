@@ -23,8 +23,8 @@
 
     Fell free to fork this project and add new features and designes.
 
-    ![Home Page](https://github.com/bhargavkuchipudi0/fastnewsnow/blob/develop/screen%20shots/fnn_home.png?raw=true)
-    ![Categories Page](https://github.com/bhargavkuchipudi0/fastnewsnow/blob/develop/screen%20shots/fnn_categories.png?raw=true)
+![Home Page](https://github.com/bhargavkuchipudi0/fastnewsnow/blob/develop/screen%20shots/fnn_home.png?raw=true)
+![Categories Page](https://github.com/bhargavkuchipudi0/fastnewsnow/blob/develop/screen%20shots/fnn_categories.png?raw=true)
 
 
 
