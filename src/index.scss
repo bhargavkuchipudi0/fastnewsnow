@@ -1,5 +1,6 @@
 @import './global.scss';
 
+
 body {
 	margin: 0;
 	padding: 0;
@@ -13,11 +14,6 @@ body {
 code {
   	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     	monospace;
-}
-
-.mrgn-auto {
-	margin: 0 auto;
-	max-width: 75%;
 }
 
 @media screen and (max-width: 1220px) {

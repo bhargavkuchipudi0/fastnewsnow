@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './header.component.scss'
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo-name.svg';
 import menu from '../../assets/open-menu.svg';
 
 class HeaderComponent extends React.Component {
@@ -30,15 +31,15 @@ class HeaderComponent extends React.Component {
             <header className="header">
                 <div className="header-content mrgn-auto">
                     <div className="logo">
-                        <img className="logo-img" src={logo} alt="articalX"/>
+                        <Link to={'/home'}><img className="logo-img" src={logo} alt="articalX"/></Link>
                         <img className="open-menu" src={menu} alt="menu" onClick={this.changeMenuState}/>
                     </div>
                     <div className="links" style={{display:this.state.menuDisplay}}>
                         <ul className="links-ul">
-                            <li className="links--li">home</li>
-                            <li className="links--li">trending</li>
-                            <li className="links--li">fashion</li>
-                            <li className="links--li">technology</li>
+                            <Link to={"/home"}><li className="links--li">home</li></Link>
+                            <Link to={"/categories"}><li className="links--li">categories</li></Link>
+                            <Link to={"/"}><li className="links--li">fashion</li></Link>
+                            <Link to={"/"}><li className="links--li">technology</li></Link>
                         </ul>
                     </div>
                 </div>

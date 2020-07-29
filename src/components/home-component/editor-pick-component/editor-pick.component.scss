@@ -14,23 +14,5 @@
     height: 350px;
     padding: 10px;
 }
-.inner-element {
-    border: 1px solid $color--e5-grey;
-    height: 100%;
-}
-.img {
-    height: 45%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-.art-cont {
-    height: 55%;
-    text-align: left;
-    padding: 7px;
-    box-sizing: border-box;
-    @include flex-alignment(space-between, flex-start, column);
-}
-.title {
-    margin: 0;
-}
+
 

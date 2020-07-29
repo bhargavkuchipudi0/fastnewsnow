@@ -9,14 +9,12 @@ const colors = {
 
 var TagComponent = (props) => {
     if (props.data === null) {
-        return(
+        return (
             <div></div>
         )
     }
     return (
-        <div className="tag" style={{backgroundColor: colors[props.type]}}>
-             <p className="tag-data">{props.name ? props.name + " : " : null}{props.data}</p>
-        </div>
+    <p className="tag-data" style={{ color: colors[props.type] }}>{props.data}{props.type === 'source' ? ',' : null}</p>
     )
 }
 

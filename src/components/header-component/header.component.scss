@@ -24,6 +24,9 @@
         cursor: pointer;
     }
 }
+.logo-img {
+    height: 40px;
+}
 .open-menu {
     display: none;
     height: 30px;
@@ -38,6 +41,10 @@
     @include flex-alignment(center, center);
     margin: 0;
     padding: 0;
+}
+.links-ul a {
+    text-decoration: none;
+    color: $color--light-grey;
 }
 .links--li {
     width: 100px;

@@ -75,3 +75,21 @@ $global--font-size: 16px;
     background-color: $color--light-grey;
 }
 
+
+/*===========================================================================
+    OTHER GLOBAL CLASSES
+============================================================================*/
+
+.mrgn-auto {
+	margin: 0 auto;
+	max-width: 75%;
+}
+.tag-holder {
+	display: flex;
+	flex-direction: row;
+}
+
+.route-container {
+    margin-top: 90px;
+}
+
