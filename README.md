@@ -1,4 +1,4 @@
-# FASTNEWSNOW
+# FAST NEWS NOW
 ## Stay tuned with the latest news updates
 
     A daily news web application where all different types of news around the world can be
